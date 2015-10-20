@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:id="@+id/mainView"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amplitude:"
+        android:textSize="28dp"
+        android:gravity="bottom"
+        android:id="@+id/textViewAmplitude"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:ems="3"
+        android:gravity="bottom"
+        android:id="@+id/editTextAmplitude"
+        android:layout_alignTop="@+id/textViewAmplitude"
+        android:layout_centerHorizontal="true"
+        android:text="1"
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="PLOT SINE SIGNAL"
+        android:id="@+id/buttonPlotSine"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/editTextAmplitude"
+        android:onClick="calculateGDataSine" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Frequency:"
+        android:textSize="28dp"
+        android:gravity="bottom"
+        android:id="@+id/textViewFrequency"
+        android:layout_below="@id/buttonPlotSine"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:ems="3"
+        android:gravity="bottom"
+        android:id="@+id/editTextFrequency"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonPlotSine"
+        android:text="1"
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="PlOT SQUARE SIGNAL"
+        android:id="@+id/buttonPlotSquare"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/buttonPlotSine"
+        android:layout_toRightOf="@id/editTextFrequency"
+        android:onClick="calculateGDataSquare" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Time: "
+        android:textSize="30dp"
+        android:gravity="bottom"
+        android:id="@+id/textViewTime"
+        android:layout_below="@id/buttonPlotSquare"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:inputType="numberDecimal"
+        android:ems="3"
+        android:gravity="bottom"
+        android:id="@+id/editTextTime"
+        android:layout_below="@id/buttonPlotSquare"
+        android:layout_centerHorizontal="true"
+        android:text="5"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="PlOT TRIANGLE SIGNAL"
+        android:id="@+id/buttonPlotTriangle"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/buttonPlotSquare"
+        android:layout_toRightOf="@id/editTextTime"
+        android:onClick="calculateGDataTriangle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phase:"
+        android:textSize="30dp"
+        android:gravity="bottom"
+        android:id="@+id/textViewPhase"
+        android:layout_below="@id/buttonPlotTriangle"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:inputType="numberDecimal"
+        android:ems="3"
+        android:gravity="bottom"
+        android:id="@+id/editTextPhase"
+        android:layout_below="@id/buttonPlotTriangle"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="PlOT SAWTOOTH SIGNAL"
+        android:id="@+id/buttonPlotSawtooth"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/buttonPlotTriangle"
+        android:layout_toRightOf="@id/editTextPhase"
+        android:onClick="calculateGDataSawtooth"
+        android:clickable="false"
+        android:textColor="#999999" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/buttonPlotSawtooth"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>
