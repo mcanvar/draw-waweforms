@@ -41,7 +41,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:layout_toRightOf="@id/editTextAmplitude"
-        android:onClick="calculateGDataSine" />
+        android:onClick="onButtonClick" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         android:textStyle="bold"
         android:layout_below="@id/buttonPlotSine"
         android:layout_toRightOf="@id/editTextFrequency"
-        android:onClick="calculateGDataSquare" />
+        android:onClick="onButtonClick" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:ems="3"
         android:gravity="bottom"
         android:id="@+id/editTextTime"
@@ -111,7 +111,7 @@
         android:textStyle="bold"
         android:layout_below="@id/buttonPlotSquare"
         android:layout_toRightOf="@id/editTextTime"
-        android:onClick="calculateGDataTriangle" />
+        android:onClick="onButtonClick" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,17 +146,13 @@
         android:textStyle="bold"
         android:layout_below="@id/buttonPlotTriangle"
         android:layout_toRightOf="@id/editTextPhase"
-        android:onClick="calculateGDataSawtooth"
-        android:clickable="false"
-        android:textColor="#999999" />
+        android:onClick="onButtonClick" />
 
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graph"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_below="@id/buttonPlotSawtooth"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:layout_below="@id/buttonPlotSawtooth" />
 
 </RelativeLayout>
